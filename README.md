@@ -18,8 +18,8 @@ composer require eihror/compress-image
 Create variables to receive the elements
 
 ```
-$source_url = 'koala.jpg'; //file that you wanna compress
-$destination_url = 'koala_mini'; //name of new file compressed
+$file = 'koala.jpg'; //file that you wanna compress
+$new_name_image = 'koala_mini'; //name of new file compressed
 $quality = 60; // Value that I chose
 $destination = 'content'; //This destination must be exist on your project
 ```
@@ -32,7 +32,7 @@ Default quality for PNG: **9 ( 0 - no compression, 9 - max compression )**
 Create a new instance of a class
 
 ```
-$image_compress = new Compress($source_url, $destination_url, $quality, $destination);
+$image_compress = new Compress($file, $new_name_image, $quality, $destination);
 ```
 
 And make the compression calling the funcion **compress_image**
