@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/eihror/compress-image/v/stable)](https://packagist.org/packages/eihror/compress-image)
+[![Total Downloads](https://poser.pugx.org/eihror/compress-image/downloads)](https://packagist.org/packages/eihror/compress-image)
+[![Latest Unstable Version](https://poser.pugx.org/eihror/compress-image/v/unstable)](https://packagist.org/packages/eihror/compress-image)
+[![License](https://poser.pugx.org/eihror/compress-image/license)](https://packagist.org/packages/eihror/compress-image)
+
 # Compress Image
 
 Compress your image without losing quality
