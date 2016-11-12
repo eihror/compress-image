@@ -16,6 +16,7 @@ Create variables to receive the elements
 $source_url = 'koala.jpg'; //file that you wanna compress
 $destination_url = 'koala_mini'; //name of new file compressed
 $quality = 60; // Value that I chose
+$destination = 'content'; //This destination must be exist on your project
 ```
 
 **The quality works only for JPG´s images. But if you wanna change the quality for PNG´s, you need to go 
@@ -26,7 +27,7 @@ Default quality for PNG: **9 ( 0 - no compression, 9 - max compression )**
 Create a new instance of a class
 
 ```
-$image_compress = new Compress($source_url, $destination_url, $quality);
+$image_compress = new Compress($source_url, $destination_url, $quality, $destination);
 ```
 
 And make the compression calling the funcion **compress_image**
@@ -34,5 +35,7 @@ And make the compression calling the funcion **compress_image**
 ```
 $image_compress->compress_image();
 ```
+
+This funtion will return only the name of new image compressed with your respective extension
 
 That´s it! Feel free to use and making the code better if you find something different or wrong
