@@ -1,0 +1,18 @@
+{
+    "name": "eihror/compress-image",
+    "description": "Compress your image without losing quality",
+    "type": "library",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eihror",
+            "email": "igor_gmelo@hotmail.com",
+            "homepage": "http://www.igormelo.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable"
+}
