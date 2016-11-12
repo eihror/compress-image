@@ -3,7 +3,7 @@
     "description": "Compress your image without losing quality",
     "minimum-stability": "stable",
     "version": "v0.0.1",
-    "homepage": "https://github.com/Eihror/codeigniter-project",
+    "homepage": "https://github.com/Eihror/compress-images",
     "license": "MIT",
     "type": "library",
     "require": {
