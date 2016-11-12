@@ -66,7 +66,6 @@ class Compress {
         $image_extension = null;
         $destination_extension = null;
         $png_compression = 9;
-        $gif_compression = 99;
         
         try{
             
@@ -140,7 +139,7 @@ class Compress {
                     $image = imagecreatefromgif($imagem);
                     imagealphablending($image, false);
                     imagesavealpha($image, true);
-                    imagegif($image, $this->destination_url, $gif_compression);
+                    imagegif($image, $this->destination_url);
             }
             
         } catch (Exception $ex) {
