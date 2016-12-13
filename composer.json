@@ -2,8 +2,8 @@
     "name": "eihror/compress-image",
     "description": "Compress your image without losing quality",
     "minimum-stability": "stable",
-    "version": "v0.0.3",
-    "homepage": "https://github.com/Eihror/compress-images",
+    "version": "v0.0.4",
+    "homepage": "https://github.com/eihror/compress-images",
     "license": "MIT",
     "type": "library",
     "require": {
