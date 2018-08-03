@@ -25,6 +25,9 @@ $pngQuality = 9; // Exclusive for PNG files
 $destination = 'content'; //This destination must be exist on your project
 ```
 
+**The quality works only for JPG�s images. But if you want to change the file to PNG�s, you have to change manually via code. GIF doesn't affect the quality**
+
+Default quality for PNG: **9 ( 0 - no compression, 9 - max compression )**
 Create a new instance of a class
 
 ```
