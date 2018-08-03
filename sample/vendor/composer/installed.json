@@ -1,0 +1,51 @@
+[
+    {
+        "name": "eihror/compress-image",
+        "version": "v0.0.5",
+        "version_normalized": "0.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/eihror/compress-image.git",
+            "reference": "a546014546298b4718f2f9d0477f1e170e559b95"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/eihror/compress-image/zipball/a546014546298b4718f2f9d0477f1e170e559b95",
+            "reference": "a546014546298b4718f2f9d0477f1e170e559b95",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2018-08-03T18:52:14+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src"
+            ],
+            "psr-4": {
+                "Eihror\\Compress\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Eihror",
+                "email": "igor_gmelo@hotmail.com",
+                "homepage": "http://www.igormelo.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Compress your image without losing quality",
+        "homepage": "https://github.com/eihror/compress-image"
+    }
+]
