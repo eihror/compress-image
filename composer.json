@@ -22,9 +22,7 @@
         "classmap": [
             "src"
         ],
-        "autoload": {
-            "psr-4": {"Eihror\\Compress\\": "src"}
-        }
+        "psr-4": {"Eihror\\Compress\\": "src"}
     },
     "extra": {
         "branch-alias": {
