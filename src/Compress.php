@@ -1,5 +1,7 @@
 <?php
 
+namespace Eihror\Compress;
+
 class Compress {
 
     // @var file_url
