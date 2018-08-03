@@ -18,6 +18,14 @@
             "role": "Developer"
         }
     ],
+    "autoload": {
+        "classmap": [
+            "src"
+        ],
+        "autoload": {
+            "psr-4": {"Eihror\\Compress\\": "src"}
+        }
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
