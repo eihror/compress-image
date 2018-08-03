@@ -21,18 +21,14 @@ Create variables to receive the elements
 $file = 'koala.jpg'; //file that you wanna compress
 $new_name_image = 'koala_mini'; //name of new file compressed
 $quality = 60; // Value that I chose
+$pngQuality = 9; // Exclusive for PNG files
 $destination = 'content'; //This destination must be exist on your project
 ```
-
-**The quality works only for JPG´s images. But if you wanna change the quality for PNG´s, you need to go 
-inside the code and change manually. The GIF images hasn´t variable to change quality**
-
-Default quality for PNG: **9 ( 0 - no compression, 9 - max compression )**
 
 Create a new instance of a class
 
 ```
-$image_compress = new Compress($file, $new_name_image, $quality, $destination);
+$image_compress = new Compress($file, $new_name_image, $quality, $pngQuality, $destination);
 ```
 
 And make the compression calling the funcion **compress_image**
