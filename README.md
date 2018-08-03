@@ -28,10 +28,10 @@ $destination = 'content'; //This destination must be exist on your project
 Create a new instance of a class
 
 ```
-$image_compress = new Compress($file, $new_name_image, $quality, $pngQuality, $destination);
+$image_compress = new Eihror\Compress\Compress($file, $new_name_image, $quality, $pngQuality, $destination);
 ```
 
-And make the compression calling the funcion **compress_image**
+And make the compression calling the function **compress_image**
 
 ```
 $image_compress->compress_image();
