@@ -24,8 +24,7 @@ $quality = 60; // Value that I chose
 $destination = 'content'; //This destination must be exist on your project
 ```
 
-**The quality works only for JPGÂ´s images. But if you wanna change the quality for PNGÂ´s, you need to go 
-inside the code and change manually. The GIF images hasnÂ´t variable to change quality**
+**The quality works only for JPG´s images. But if you want to change the file to PNG´s, you have to change manually via code. GIF doesn't affect the quality**
 
 Default quality for PNG: **9 ( 0 - no compression, 9 - max compression )**
 
