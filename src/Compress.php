@@ -10,6 +10,9 @@ class Compress {
 
     // @var quality
     protected $quality;
+
+    // @var quality
+    protected $pngQuality;
     
     // @var destination
     protected $destination;
@@ -26,7 +29,7 @@ class Compress {
     // @var array_img_types
     protected $array_img_types;
     
-    public function __construct($file_url, $new_name_image, $quality, $destination = null) {
+    public function __construct($file_url, $new_name_image, $quality, $pngQuality, $destination = null) {
         $this->set_file_url($file_url);
         $this->set_new_name_image($new_name_image);
         $this->set_quality($quality);
@@ -45,6 +48,10 @@ class Compress {
         return $this->quality;
     }
 
+    function get_pngQuality() {
+        return $this->pngQuality;
+    }
+
     function set_file_url($file_url) {
         $this->file_url = $file_url;
     }
@@ -55,6 +62,10 @@ class Compress {
 
     function set_quality($quality) {
         $this->quality = $quality;
+    }
+
+    function set_pngQuality($pngQuality) {
+        $this->pngQuality = $pngQuality;
     }
     
     function get_destination() {
@@ -78,7 +89,8 @@ class Compress {
         $last_char = null;
         $image_extension = null;
         $destination_extension = null;
-        $png_compression = 9;
+        $png_compression = null;
+        $maxsize = 5245330;
         
         try{
             
@@ -103,7 +115,7 @@ class Compress {
             $image_size = filesize($this->file_url);
                                     
             //if image size is bigger than 5mb
-            if($image_size > 10485760){
+            if($image_size >= $maxsize){
                 throw new Exception('Please send a imagem smaller than 5mb!');
                 return false;
             }
@@ -119,6 +131,9 @@ class Compress {
                 throw new Exception('Please inform the quality!');
                 return false;
             }
+
+            //If not found the png quality
+            $png_compression = (!empty($this->pngQuality)) ? $this->pngQuality : 9 ;
             
             $image_extension = pathinfo($this->file_url, PATHINFO_EXTENSION);
             //Verify if is sended a destination file name with extension

@@ -3,7 +3,7 @@
     "description": "Compress your image without losing quality",
     "minimum-stability": "stable",
     "version": "v0.0.4",
-    "homepage": "https://github.com/Eihror/compress-images",
+    "homepage": "https://github.com/eihror/compress-images",
     "license": "MIT",
     "type": "library",
     "require": {
@@ -21,7 +21,8 @@
     "autoload": {
         "classmap": [
             "src"
-        ]
+        ],
+        "psr-4": {"Eihror\\Compress\\": "src"}
     },
     "extra": {
         "branch-alias": {
