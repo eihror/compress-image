@@ -40,6 +40,6 @@ And make the compression calling the function **compress_image**
 $image_compress->compress_image();
 ```
 
-This funtion will return only the name of new image compressed with your respective extension
+This function will return only the name of new image compressed with your respective extension
 
 That´s it! Feel free to use and making the code better if you find something different or wrong
