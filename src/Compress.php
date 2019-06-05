@@ -169,10 +169,22 @@ class Compress {
                 case 'image/png':
                 case 'image/x-png':
                     //Create a new png image
-                    $new_image = imagecreatefrompng('conteudo/'.$this->file_url);
-                    imagealphablending($new_image , false);
-                    imagesavealpha($new_image , true);
-                    imagepng($new_image, $this->destination.$this->new_name_image, $png_compression);
+                    $maxImgWidth = 900;
+                    // create image from posted file
+                    $src = imagecreatefrompng($this->file_url);
+                    // get original size of uploaded image
+                    list($width, $height) = getimagesize($this->file_url);
+                    if ($width > $maxImgWidth) 
+                    {
+                        $newwidth = $maxImgWidth;
+                        $newheight = ($height / $width) * $newwidth;
+                        $newImage = imagecreate($newwidth, $newheight);
+                        imagecopyresampled($newImage, $src, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
+                        imagepng($newImage, $this->destination.$this->new_name_image, $png_compression);
+                        imagedestroy($src);
+                        imagedestroy($newImage);
+                        $resizedFlag = true;
+                    }
                     break;
                 // if is GIF
                 case 'image/gif':
