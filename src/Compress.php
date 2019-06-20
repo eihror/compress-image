@@ -189,7 +189,7 @@ class Compress {
                 // if is GIF
                 case 'image/gif':
                     //Create a new gif image
-                    $new_image = imagecreatefromgif('conteudo/'.$this->file_url);
+                    $new_image = imagecreatefromgif($this->file_url);
                     imagealphablending($new_image, false);
                     imagesavealpha($new_image, true);
                     imagegif($new_image, $this->destination.$this->new_name_image);
