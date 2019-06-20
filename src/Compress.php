@@ -31,11 +31,15 @@ class Compress {
     // @var array_img_types
     protected $array_img_types;
     
-    public function __construct($file_url, $new_name_image, $quality, $pngQuality, $destination = null) {
+    // @var maxSize
+    protected $maxSize;
+    
+    public function __construct($file_url, $new_name_image, $quality, $pngQuality, $destination = null, $maxsize= 5245330) {
         $this->set_file_url($file_url);
         $this->set_new_name_image($new_name_image);
         $this->set_quality($quality);
         $this->set_destination($destination);
+        $this->set_maxSize($maxsize);
     }
 
     function get_file_url() {
@@ -52,6 +56,10 @@ class Compress {
 
     function get_pngQuality() {
         return $this->pngQuality;
+    }
+    
+    function get_maxsize() {
+        return $this->maxSize;
     }
 
     function set_file_url($file_url) {
@@ -78,6 +86,10 @@ class Compress {
         $this->destination = $destination;
     }
     
+    function set_maxSize($maxsize) {
+        $this->maxSize = $maxsize;   
+    }
+    
     /**
      * Function to compress image
      * @return boolean
@@ -92,7 +104,6 @@ class Compress {
         $image_extension = null;
         $destination_extension = null;
         $png_compression = null;
-        $maxsize = 5245330;
         
         try{
             
@@ -116,9 +127,9 @@ class Compress {
             //Get file size
             $image_size = filesize($this->file_url);
                                     
-            //if image size is bigger than 5mb
-            if($image_size >= $maxsize){
-                throw new Exception('Please send a imagem smaller than 5mb!');
+            //if image size is bigger than given file size. dafult it will be 5mb!
+            if($image_size >= $this->maxSize){
+                throw new \Exception("Please send a imagem smaller than {$this->maxSize}bytes!");
                 return false;
             }
             
