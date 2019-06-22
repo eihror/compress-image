@@ -23,6 +23,7 @@ $new_name_image = 'koala_mini'; //name of new file compressed
 $quality = 60; // Value that I chose
 $pngQuality = 9; // Exclusive for PNG files
 $destination = 'content'; //This destination must be exist on your project
+$maxsize = 5245330; //Set maximum image size in bytes. if no value given 5mb by default.
 ```
 
 **The quality works only for JPG�s images. But if you want to change the file to PNG�s, you have to change manually via code. GIF doesn't affect the quality**
@@ -31,7 +32,7 @@ Default quality for PNG: **9 ( 0 - no compression, 9 - max compression )**
 Create a new instance of a class
 
 ```
-$image_compress = new Eihror\Compress\Compress($file, $new_name_image, $quality, $pngQuality, $destination);
+$image_compress = new Eihror\Compress\Compress($file, $new_name_image, $quality, $pngQuality, $destination, $maxsize);
 ```
 
 And make the compression calling the function **compress_image**
